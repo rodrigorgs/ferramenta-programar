@@ -179,7 +179,11 @@ public class Tela_Principal extends JFrame{
     private void initialize(){
     	setResizable(false);
         setJMenuBar(getJJMenuBarPrincipal());
-        setContentPane(getJContentPaneConsulta());
+        if (tela_consulta) {
+        	setContentPane(getJContentPaneConsulta());
+        } else {
+        	setContentPane(getJContentPaneConexao());
+        }
         setTitle("ProgramAR - Programa de ensino da Algera Relacional");
         setVisible(true);
     	    	
